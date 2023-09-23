@@ -5,16 +5,16 @@ rect.addEventListener('mousemove', function(event){
     let cursorLocation=event.clientX-rectLocation.left;
     if(cursorLocation<(rectLocation.width/2)){
         let redColor=gsap.utils.mapRange(0,rectLocation.width/2,255,0,cursorLocation);
+        console.log(redColor);
         gsap.to(rect,{
-            color: `rgb(${redColor},0,0)`,
+            backgroundColor: `rgb(${redColor},0,0)`,
             ease:Power4
-        });
-        console.log(rectLocation.width/2);    
+        });   
     }
-    if(cursorLocation>(rectLocation.width/2)){
+    else{
         let blueColor=gsap.utils.mapRange(rectLocation.width/2,rectLocation.width,0,255,cursorLocation);
         gsap.to(rect,{
-            backgroundColor:  `0,0,rgb(${blueColor})`,
+            backgroundColor: `rgb(0,0,r${blueColor})`,
             ease:Power4
         });
     }
