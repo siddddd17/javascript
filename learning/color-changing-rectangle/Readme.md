@@ -24,3 +24,4 @@
         cursorLocation=middle rgb red=0
         cursorLocation=middle rgb blue=0
         cursorLocation=width rgb blue=255
+        (use gsap map range for this)
